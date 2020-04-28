@@ -1,0 +1,1 @@
+../lib/libfltk.a ../lib/libfltk_images.a ../lib/libfltk_forms.a ../lib/libfltk_jpeg.a ../lib/libfltk_png.a ../lib/libfltk_z.a ../lib/libfltk.a -lcomctl32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
