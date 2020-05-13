@@ -1,0 +1,3 @@
+E:\Projekty\CLion\lib\cmake\bin\cmake.exe -E remove -f CMakeFiles\minimum.dir/objects.a
+E:\MinGW\bin\ar.exe cr CMakeFiles\minimum.dir/objects.a @CMakeFiles\minimum.dir\objects1.rsp
+E:\MinGW\bin\g++.exe    -Wl,-subsystem,windows -mwindows -Wl,--whole-archive CMakeFiles\minimum.dir/objects.a -Wl,--no-whole-archive  -o ..\bin\examples\minimum.exe -Wl,--out-implib,..\bin\examples\libminimum.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\minimum.dir\linklibs.rsp

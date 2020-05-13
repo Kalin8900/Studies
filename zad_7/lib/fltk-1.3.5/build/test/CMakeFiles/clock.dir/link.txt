@@ -1,0 +1,3 @@
+E:\Projekty\CLion\lib\cmake\bin\cmake.exe -E remove -f CMakeFiles\clock.dir/objects.a
+E:\MinGW\bin\ar.exe cr CMakeFiles\clock.dir/objects.a @CMakeFiles\clock.dir\objects1.rsp
+E:\MinGW\bin\g++.exe    -Wl,-subsystem,windows -mwindows -Wl,--whole-archive CMakeFiles\clock.dir/objects.a -Wl,--no-whole-archive  -o ..\bin\examples\clock.exe -Wl,--out-implib,..\bin\examples\libclock.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\clock.dir\linklibs.rsp
