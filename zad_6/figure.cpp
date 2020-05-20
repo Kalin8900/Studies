@@ -243,17 +243,6 @@ figure *get_figure(std::istream &is)
     figFactory::getFactory().registerFigure(Line::class_id(), Line::create);
 
     return figFactory::getFactory().create(id, pts);
-//    figFactory::getFactory().registerFigure(Circ::class_id(), Circ::create);
-//    figFactory::getFactory().registerFigure(Line::class_id(), Line::create);
-
-
-    //    if(id == Rect::class_id())
-//        return new Rect(pts);
-//    if(id == Circ::class_id())
-//        return new Circ(pts);
-//    if(id == Line::class_id())
-//        return new Line(pts);
-    throw std::runtime_error("Unknown figure id.");
 }
 
 std::pair<FPoint, FPoint> map_bbox(
