@@ -6,12 +6,12 @@
 
 //FPoint
 
-FPoint max(const FPoint& l, const FPoint& r)
+FPoint max(const FPoint &l, const FPoint &r)
 {
     return {std::max(l.x, r.x), std::max(l.y, r.y)};
 }
 
-FPoint min(const FPoint& l, const FPoint& r)
+FPoint min(const FPoint &l, const FPoint &r)
 {
     return {std::min(l.x, r.x), std::min(l.y, r.y)};
 }
@@ -21,13 +21,13 @@ FPoint::operator Graph_lib::Point() const //conversion from FPoint to Graph_lib:
     return {int(this->x), int(this->y)};
 }
 
-std::ostream& operator<<(std::ostream& os, const FPoint& pt)
+std::ostream &operator<<(std::ostream &os, const FPoint &pt)
 {
     os << '(' << pt.x << ',' << pt.y << ')';
     return os;
 }
 
-std::istream& operator>>(std::istream& is, FPoint& pt)
+std::istream &operator>>(std::istream &is, FPoint &pt)
 {
     char l, c, r;
     is >> l >> pt.x >> c >> pt.y >> r;
@@ -36,27 +36,27 @@ std::istream& operator>>(std::istream& is, FPoint& pt)
     return is;
 }
 
-bool operator==(const FPoint& ls, const int& to_check) //comparing FPoint with single int
+bool operator==(const FPoint &ls, const int &to_check) //comparing FPoint with single int
 {
     return ls.x == to_check && ls.y == to_check;
 }
 
-FPoint operator*(const FPoint& ls, const FPoint& rs)
+FPoint operator*(const FPoint &ls, const FPoint &rs)
 {
     return {ls.x * rs.x, ls.y * rs.y};
 }
 
-FPoint operator+(const FPoint& ls, const FPoint& rs)
+FPoint operator+(const FPoint &ls, const FPoint &rs)
 {
     return {ls.x + rs.x, ls.y + rs.y};
 }
 
-FPoint operator-(const FPoint& ls, const FPoint& rs)
+FPoint operator-(const FPoint &ls, const FPoint &rs)
 {
     return {ls.x - rs.x, ls.y - rs.y};
 }
 
-std::pair<FPoint, FPoint> operator*(const std::pair<FPoint, FPoint>& pr, FPoint& pt)
+std::pair<FPoint, FPoint> operator*(const std::pair<FPoint, FPoint> &pr, FPoint &pt)
 {
     return std::make_pair(pr.first * pt, pr.second * pt);
 }
@@ -67,7 +67,7 @@ std::pair<FPoint, FPoint> operator*(const std::pair<FPoint, FPoint>& pr, FPoint&
 std::pair<FPoint, FPoint> figure::bbox() const
 {
     FPoint pmin = fdef[0], pmax = fdef[0];
-    for(const auto& elem : fdef)
+    for(const auto &elem : fdef)
     {
         pmin = min(pmin, elem);
         pmax = max(pmax, elem);
@@ -75,10 +75,10 @@ std::pair<FPoint, FPoint> figure::bbox() const
     return std::make_pair(pmin, pmax);
 }
 
-std::ostream& operator<<(std::ostream& os, const figure& fig)
+std::ostream &operator<<(std::ostream &os, const figure &fig)
 {
     os << fig.get_id() << '(';
-    for(const auto& elem : fig.fdef)
+    for(const auto &elem : fig.fdef)
     {
         os << elem;
     }
@@ -88,9 +88,9 @@ std::ostream& operator<<(std::ostream& os, const figure& fig)
 
 //Rect
 
-Graph_lib::Shape* Rect::get_shape(
-        const FPoint& scale,
-        const FPoint& trans) const
+Graph_lib::Shape *Rect::get_shape(
+        const FPoint &scale,
+        const FPoint &trans) const
 {
     if(scale == 0)
         throw runtime_error("Scale must be different from 0");
@@ -113,16 +113,21 @@ std::vector<FPoint> Rect::get_points() const
     return vec;
 }
 
+figure *Rect::create(const vector<FPoint> &points)
+{
+    return new Rect(points);
+}
+
 //Circ
 
-Graph_lib::Shape* Circ::get_shape(
-        const FPoint& scale,
-        const FPoint& trans) const
+Graph_lib::Shape *Circ::get_shape(
+        const FPoint &scale,
+        const FPoint &trans) const
 {
     const FPoint c_pt = fdef[1] * scale + trans;
     const FPoint mid = fdef[0] * scale + trans;
     float rad = radius(mid, c_pt);
-    return new Graph_lib::Circle(mid, (int)rad);
+    return new Graph_lib::Circle(mid, (int) rad);
 }
 
 std::pair<FPoint, FPoint> Circ::bbox() const
@@ -144,14 +149,19 @@ std::vector<FPoint> Circ::get_points() const
     return vec;
 }
 
+figure *Circ::create(const vector<FPoint> &points)
+{
+    return new Circ(points);
+}
+
 //Line
 
-Graph_lib::Shape* Line::get_shape(
-        const FPoint& scale,
-        const FPoint& trans) const
+Graph_lib::Shape *Line::get_shape(
+        const FPoint &scale,
+        const FPoint &trans) const
 {
-    auto* line = new Graph_lib::Open_polyline;
-    for(const auto& elem : fdef)
+    auto *line = new Graph_lib::Open_polyline;
+    for(const auto &elem : fdef)
     {
         line->add(elem * scale + trans);
     }
@@ -163,20 +173,25 @@ std::vector<FPoint> Line::get_points() const
     return fdef;
 }
 
+figure *Line::create(const vector<FPoint> &points)
+{
+    return new Line(points);
+}
+
 //Additional
 
-float radius(const FPoint& mid, const FPoint& pt)
+float radius(const FPoint &mid, const FPoint &pt)
 {
     return static_cast<float>(sqrt(pow(mid.x - pt.x, 2.0) + pow(mid.y - pt.y, 2.0)));
 }
 
-std::ostream& operator<<(std::ostream& os, const std::pair<FPoint, FPoint> p)
+std::ostream &operator<<(std::ostream &os, const std::pair<FPoint, FPoint> p)
 {
     os << p.first << ' ' << p.second;
     return os;
 }
 
-std::string get_id(std::istream& is)
+std::string get_id(std::istream &is)
 {
     std::string res;
     char br;
@@ -195,7 +210,7 @@ std::string get_id(std::istream& is)
     return res;
 }
 
-std::vector<FPoint> get_points(std::istream& is)
+std::vector<FPoint> get_points(std::istream &is)
 {
     std::vector<FPoint> res;
     char br;
@@ -215,26 +230,37 @@ std::vector<FPoint> get_points(std::istream& is)
     return res;
 }
 
-figure* get_figure(std::istream& is)
+figure *get_figure(std::istream &is)
 {
     std::string id = get_id(is);
     if(id.length() == 0)
         return nullptr;
+
     std::vector<FPoint> pts = get_points(is);
-    if(id == Rect::class_id())
-        return new Rect(pts);
-    if(id == Circ::class_id())
-        return new Circ(pts);
-    if(id == Line::class_id())
-        return new Line(pts);
+
+    figFactory::getFactory().registerFigure(Rect::class_id(), Rect::create);
+    figFactory::getFactory().registerFigure(Circ::class_id(), Circ::create);
+    figFactory::getFactory().registerFigure(Line::class_id(), Line::create);
+
+    return figFactory::getFactory().create(id, pts);
+//    figFactory::getFactory().registerFigure(Circ::class_id(), Circ::create);
+//    figFactory::getFactory().registerFigure(Line::class_id(), Line::create);
+
+
+    //    if(id == Rect::class_id())
+//        return new Rect(pts);
+//    if(id == Circ::class_id())
+//        return new Circ(pts);
+//    if(id == Line::class_id())
+//        return new Line(pts);
     throw std::runtime_error("Unknown figure id.");
 }
 
 std::pair<FPoint, FPoint> map_bbox(
-        const std::vector<figure*>& figures)
+        const std::vector<figure *> &figures)
 {
     std::pair<FPoint, FPoint> cur_bbox = (*figures[0]).bbox();
-    for(const auto& elem : figures)
+    for(const auto &elem : figures)
     {
         cur_bbox.first = min(cur_bbox.first, (*elem).bbox().first);
         cur_bbox.second = max(cur_bbox.second, (*elem).bbox().second);
@@ -242,25 +268,25 @@ std::pair<FPoint, FPoint> map_bbox(
     return cur_bbox;
 }
 
-float bbox_height(const std::pair<FPoint, FPoint>& bbox)
+float bbox_height(const std::pair<FPoint, FPoint> &bbox)
 {
     return bbox.second.y - bbox.first.y;
 }
 
-float bbox_width(const std::pair<FPoint, FPoint>& bbox)
+float bbox_width(const std::pair<FPoint, FPoint> &bbox)
 {
     return bbox.second.x - bbox.first.x;
 }
 
-FPoint bbox_mid(const std::pair<FPoint, FPoint>& bbox)
+FPoint bbox_mid(const std::pair<FPoint, FPoint> &bbox)
 {
 
     return {(bbox.second.x + bbox.first.x) / 2, (bbox.second.y + bbox.first.y) / 2};
 }
 
 std::pair<FPoint, FPoint> get_transformation(
-        const std::pair<FPoint, FPoint>& obj_bbox,
-        const std::pair<FPoint, FPoint>& disp_bbox)
+        const std::pair<FPoint, FPoint> &obj_bbox,
+        const std::pair<FPoint, FPoint> &disp_bbox)
 {
     FPoint scale;
     const float h_scale = bbox_height(disp_bbox) / bbox_height(obj_bbox);
@@ -275,4 +301,25 @@ std::pair<FPoint, FPoint> get_transformation(
 std::string window_title()
 {
     return "Animation box";
+}
+
+//figFactory
+
+figFactory &figFactory::getFactory()
+{
+    static figFactory factory;
+    return factory;
+}
+
+figure *figFactory::create(const string &id, const vector<FPoint> &fdef)
+{
+    const auto it = creatorsMap.find(id);
+    if (it != creatorsMap.end())
+        return it->second(fdef);
+    throw std::runtime_error("Unknown fig id passed to factory");
+}
+
+void figFactory::registerFigure(const string &id, figFactory::createFig pCreate)
+{
+    creatorsMap.insert({id, pCreate});
 }
