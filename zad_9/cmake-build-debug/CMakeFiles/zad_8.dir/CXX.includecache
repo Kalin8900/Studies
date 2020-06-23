@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Projekty/CLion/Git/zad_8/image.cpp
+image.h
+E:/Projekty/CLion/Git/zad_8/image.h
+fstream
+-
+memory
+-
+iostream
+-
+cstring
+-
+utility
+-
+vector
+-
+cmath
+-
+
+E:/Projekty/CLion/Git/zad_8/image.h
+string
+-
+array
+-
+vector
+-
+map
+-
+
+E:/Projekty/CLion/Git/zad_8/main.cpp
+iostream
+-
+sstream
+-
+image.h
+E:/Projekty/CLion/Git/zad_8/image.h
+
