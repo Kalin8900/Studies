@@ -34,26 +34,21 @@ struct bmpHeader //struct from program in C. Describes BMP format
 };
 #pragma pack(pop)
 
+//class which gives an EAN code from given number
 class numbReceiver
 {
 public:
-    static numbReceiver &getReceiver();
+    static numbReceiver &getReceiver(); //only one object in whole program
 
     ~numbReceiver();
 
-    void clearAllMem();
+    void clearAllMem(); //memory deallocation
 
     numbReceiver(const numbReceiver &) = delete;
 
     numbReceiver &operator=(const numbReceiver &) = delete;
 
-    void initReceiver();
-
-    void registerNumberA(const unsigned int &number, const std::vector<unsigned char> &vec);
-
-    void registerNumberC(const unsigned int &number, const std::vector<unsigned char> &vec);
-
-    void registerSpecialSign(const std::string &signName, const std::vector<unsigned char> &vec);
+    void initReceiver(); //loads receiver with data
 
     std::vector<unsigned char> getNumInCodeA(const unsigned int &number);
 
@@ -64,41 +59,52 @@ public:
 private:
 
     typedef std::map<unsigned int, std::vector<unsigned char>> receivers;
-    receivers receiversMapA;
-    receivers receiversMapC;
-    std::map<std::string, std::vector<unsigned char>> specialSignsMap;
+    receivers receiversMapA; //numbers coded in EAN-8A
+    receivers receiversMapC; //numbers coded in EAN-8C
+    std::map<std::string, std::vector<unsigned char>> specialSignsMap; //special signs like start, stop
 
     numbReceiver() = default;
+
+    //methods which initalise maps in receiver
+
+    void registerNumberA(const unsigned int &number, const std::vector<unsigned char> &vec);
+
+    void registerNumberC(const unsigned int &number, const std::vector<unsigned char> &vec);
+
+    void registerSpecialSign(const std::string &signName, const std::vector<unsigned char> &vec);
 };
+
 
 class image
 {
 public:
     image(const unsigned int &width, const unsigned int &height,
-          std::vector<unsigned int> numb);
+          std::vector<unsigned int> numb); //creates and allocates memory for image
 
     ~image();
 
-    void initHeader();
+    void initHeader(); //save data to bmp format
 
-    int saveBMP(const std::string &fname);
+    int saveBMP(const std::string &fname); //save image to file by binary streams
 
     void clearMem();
 
-    unsigned int getControlNumber();
+    unsigned int getControlNumber(); //returns control number which is last in the EAN-8
 
     void setPixel(unsigned int x,
-                  unsigned int y, unsigned char value);
+                  unsigned int y, unsigned char value); //set pixel in given color in imgPixels array
 
-    void generateEAN();
-
-    void generateCol(const unsigned int &xPos, const unsigned int &oneBitWidth, const unsigned char &val);
+    void generateEAN(); //generates image ready to save in imgPixels array
 
 private:
+
     unsigned int imgWidth, imgHeight, lineInBytes;
     unsigned char *imgPixels;
     bmpHeader imgHeader;
     std::vector<unsigned int> digits;
+
+    //helper method to generateEAN()
+    void generateCol(const unsigned int &xPos, const unsigned int &oneBitWidth, const unsigned char &val);
 };
 
 

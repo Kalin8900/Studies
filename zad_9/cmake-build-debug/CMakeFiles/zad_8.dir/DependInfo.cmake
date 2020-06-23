@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/Projekty/CLion/Git/zad_8/image.cpp" "E:/Projekty/CLion/Git/zad_8/cmake-build-debug/CMakeFiles/zad_8.dir/image.cpp.obj"
-  "E:/Projekty/CLion/Git/zad_8/main.cpp" "E:/Projekty/CLion/Git/zad_8/cmake-build-debug/CMakeFiles/zad_8.dir/main.cpp.obj"
+  "E:/Projekty/CLion/Git/zad_9/image.cpp" "E:/Projekty/CLion/Git/zad_9/cmake-build-debug/CMakeFiles/zad_8.dir/image.cpp.obj"
+  "E:/Projekty/CLion/Git/zad_9/main.cpp" "E:/Projekty/CLion/Git/zad_9/cmake-build-debug/CMakeFiles/zad_8.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

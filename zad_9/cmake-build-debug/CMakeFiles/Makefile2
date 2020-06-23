@@ -43,10 +43,10 @@ RM = C:\JT\apps\CLion\ch-0\201.7223.86\bin\cmake\win\bin\cmake.exe -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Projekty\CLion\Git\zad_8
+CMAKE_SOURCE_DIR = E:\Projekty\CLion\Git\zad_9
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Projekty\CLion\Git\zad_8\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Projekty\CLion\Git\zad_9\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -73,14 +73,14 @@ clean: CMakeFiles/zad_8.dir/clean
 CMakeFiles/zad_8.dir/all:
 	$(MAKE) -f CMakeFiles\zad_8.dir\build.make CMakeFiles/zad_8.dir/depend
 	$(MAKE) -f CMakeFiles\zad_8.dir\build.make CMakeFiles/zad_8.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\Projekty\CLion\Git\zad_8\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target zad_8"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\Projekty\CLion\Git\zad_9\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target zad_8"
 .PHONY : CMakeFiles/zad_8.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/zad_8.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Projekty\CLion\Git\zad_8\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Projekty\CLion\Git\zad_9\cmake-build-debug\CMakeFiles 3
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/zad_8.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Projekty\CLion\Git\zad_8\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Projekty\CLion\Git\zad_9\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/zad_8.dir/rule
 
 # Convenience name for target.

@@ -87,7 +87,7 @@ int main()
 
 
     myWindow wnd(Point(100, 100), 600, 400,
-                 window_title(), "house.txt");
+                 windowTitle(), "house.txt");
     gui_main();
 
 

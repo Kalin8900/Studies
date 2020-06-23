@@ -15,6 +15,8 @@ int main(int argc, char *argv[])
         return -1;
     }
 
+    //Control number tests
+
     {
         vector<vector<unsigned int>> controlNumberTest = {
                 {9, 6, 3, 8, 5, 0, 7},
@@ -56,7 +58,7 @@ int main(int argc, char *argv[])
 
     vector<unsigned int> numbers;
 
-    cout << "Enter 7 digits of EAN-8 code" << endl;
+    cout << "Enter 7 digits (one by one!) of the EAN-8 code" << endl;
     int digit;
     while(numbers.size() != 7)
     {
@@ -66,7 +68,8 @@ int main(int argc, char *argv[])
             {
                 cin >> digit;
                 if(digit > 9)
-                    throw invalid_argument("You passed wrong digit. It must be from <0, 9>");
+                    throw invalid_argument("You passed wrong digit. It must be from <0, 9>. "
+                                           "Remember to pass number one by one");
                 numbers.push_back(digit);
             }
         }

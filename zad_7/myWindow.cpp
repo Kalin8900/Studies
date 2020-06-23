@@ -161,6 +161,7 @@ std::vector<menuSpec> myWindow::btnNames
                 {"Outline",     80, 20},
                 {"Test menu",   80, 20},
                 {"Test menu 2", 80, 20},
+                {"Test menu 3", 80, 20},
                 {"Test menu 3", 80, 20}
         };
 

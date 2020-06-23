@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/Projekty/CLion/Git/zad_8/cmake-build-debug"/>
+				<Option working_dir="E:/Projekty/CLion/Git/zad_9/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="zad_8">
-				<Option output="E:/Projekty/CLion/Git/zad_8/cmake-build-debug/zad_8.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/Projekty/CLion/Git/zad_8/cmake-build-debug"/>
+				<Option output="E:/Projekty/CLion/Git/zad_9/cmake-build-debug/zad_8.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Projekty/CLion/Git/zad_9/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="e:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 zad_8"/>
-					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 zad_8"/>
+					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="zad_8/fast">
-				<Option output="E:/Projekty/CLion/Git/zad_8/cmake-build-debug/zad_8.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/Projekty/CLion/Git/zad_8/cmake-build-debug"/>
+				<Option output="E:/Projekty/CLion/Git/zad_9/cmake-build-debug/zad_8.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Projekty/CLion/Git/zad_9/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,43 +53,43 @@
 					<Add directory="e:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 zad_8/fast"/>
-					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 zad_8/fast"/>
+					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/Projekty/CLion/Git/zad_8/cmake-build-debug"/>
+				<Option working_dir="E:/Projekty/CLion/Git/zad_9/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/Projekty/CLion/Git/zad_8/cmake-build-debug"/>
+				<Option working_dir="E:/Projekty/CLion/Git/zad_9/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_8/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/MinGW/bin/mingw32-make.exe -f &quot;E:/Projekty/CLion/Git/zad_9/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/Projekty/CLion/Git/zad_8/image.cpp">
+		<Unit filename="E:/Projekty/CLion/Git/zad_9/image.cpp">
 			<Option target="zad_8"/>
 		</Unit>
-		<Unit filename="E:/Projekty/CLion/Git/zad_8/image.h">
+		<Unit filename="E:/Projekty/CLion/Git/zad_9/image.h">
 			<Option target="zad_8"/>
 		</Unit>
-		<Unit filename="E:/Projekty/CLion/Git/zad_8/main.cpp">
+		<Unit filename="E:/Projekty/CLion/Git/zad_9/main.cpp">
 			<Option target="zad_8"/>
 		</Unit>
-		<Unit filename="E:/Projekty/CLion/Git/zad_8/CMakeLists.txt">
+		<Unit filename="E:/Projekty/CLion/Git/zad_9/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

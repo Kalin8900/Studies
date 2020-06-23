@@ -42,10 +42,10 @@ RM = C:\JT\apps\CLion\ch-0\201.7223.86\bin\cmake\win\bin\cmake.exe -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Projekty\CLion\Git\zad_8
+CMAKE_SOURCE_DIR = E:\Projekty\CLion\Git\zad_9
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Projekty\CLion\Git\zad_8\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Projekty\CLion\Git\zad_9\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/zad_8.dir/depend.make
@@ -58,29 +58,29 @@ include CMakeFiles/zad_8.dir/flags.make
 
 CMakeFiles/zad_8.dir/main.cpp.obj: CMakeFiles/zad_8.dir/flags.make
 CMakeFiles/zad_8.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Projekty\CLion\Git\zad_8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/zad_8.dir/main.cpp.obj"
-	E:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\zad_8.dir\main.cpp.obj -c E:\Projekty\CLion\Git\zad_8\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Projekty\CLion\Git\zad_9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/zad_8.dir/main.cpp.obj"
+	E:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\zad_8.dir\main.cpp.obj -c E:\Projekty\CLion\Git\zad_9\main.cpp
 
 CMakeFiles/zad_8.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zad_8.dir/main.cpp.i"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Projekty\CLion\Git\zad_8\main.cpp > CMakeFiles\zad_8.dir\main.cpp.i
+	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Projekty\CLion\Git\zad_9\main.cpp > CMakeFiles\zad_8.dir\main.cpp.i
 
 CMakeFiles/zad_8.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zad_8.dir/main.cpp.s"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Projekty\CLion\Git\zad_8\main.cpp -o CMakeFiles\zad_8.dir\main.cpp.s
+	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Projekty\CLion\Git\zad_9\main.cpp -o CMakeFiles\zad_8.dir\main.cpp.s
 
 CMakeFiles/zad_8.dir/image.cpp.obj: CMakeFiles/zad_8.dir/flags.make
 CMakeFiles/zad_8.dir/image.cpp.obj: ../image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Projekty\CLion\Git\zad_8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/zad_8.dir/image.cpp.obj"
-	E:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\zad_8.dir\image.cpp.obj -c E:\Projekty\CLion\Git\zad_8\image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Projekty\CLion\Git\zad_9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/zad_8.dir/image.cpp.obj"
+	E:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\zad_8.dir\image.cpp.obj -c E:\Projekty\CLion\Git\zad_9\image.cpp
 
 CMakeFiles/zad_8.dir/image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/zad_8.dir/image.cpp.i"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Projekty\CLion\Git\zad_8\image.cpp > CMakeFiles\zad_8.dir\image.cpp.i
+	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Projekty\CLion\Git\zad_9\image.cpp > CMakeFiles\zad_8.dir\image.cpp.i
 
 CMakeFiles/zad_8.dir/image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/zad_8.dir/image.cpp.s"
-	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Projekty\CLion\Git\zad_8\image.cpp -o CMakeFiles\zad_8.dir\image.cpp.s
+	E:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Projekty\CLion\Git\zad_9\image.cpp -o CMakeFiles\zad_8.dir\image.cpp.s
 
 # Object files for target zad_8
 zad_8_OBJECTS = \
@@ -96,7 +96,7 @@ zad_8.exe: CMakeFiles/zad_8.dir/build.make
 zad_8.exe: CMakeFiles/zad_8.dir/linklibs.rsp
 zad_8.exe: CMakeFiles/zad_8.dir/objects1.rsp
 zad_8.exe: CMakeFiles/zad_8.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Projekty\CLion\Git\zad_8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable zad_8.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Projekty\CLion\Git\zad_9\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable zad_8.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\zad_8.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,6 +109,6 @@ CMakeFiles/zad_8.dir/clean:
 .PHONY : CMakeFiles/zad_8.dir/clean
 
 CMakeFiles/zad_8.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Projekty\CLion\Git\zad_8 E:\Projekty\CLion\Git\zad_8 E:\Projekty\CLion\Git\zad_8\cmake-build-debug E:\Projekty\CLion\Git\zad_8\cmake-build-debug E:\Projekty\CLion\Git\zad_8\cmake-build-debug\CMakeFiles\zad_8.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Projekty\CLion\Git\zad_9 E:\Projekty\CLion\Git\zad_9 E:\Projekty\CLion\Git\zad_9\cmake-build-debug E:\Projekty\CLion\Git\zad_9\cmake-build-debug E:\Projekty\CLion\Git\zad_9\cmake-build-debug\CMakeFiles\zad_8.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/zad_8.dir/depend
 

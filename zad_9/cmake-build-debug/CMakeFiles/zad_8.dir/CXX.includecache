@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-E:/Projekty/CLion/Git/zad_8/image.cpp
+E:/Projekty/CLion/Git/zad_9/image.cpp
 image.h
-E:/Projekty/CLion/Git/zad_8/image.h
+E:/Projekty/CLion/Git/zad_9/image.h
 fstream
 -
 memory
@@ -24,7 +24,7 @@ vector
 cmath
 -
 
-E:/Projekty/CLion/Git/zad_8/image.h
+E:/Projekty/CLion/Git/zad_9/image.h
 string
 -
 array
@@ -34,11 +34,11 @@ vector
 map
 -
 
-E:/Projekty/CLion/Git/zad_8/main.cpp
+E:/Projekty/CLion/Git/zad_9/main.cpp
 iostream
 -
 sstream
 -
 image.h
-E:/Projekty/CLion/Git/zad_8/image.h
+E:/Projekty/CLion/Git/zad_9/image.h
 

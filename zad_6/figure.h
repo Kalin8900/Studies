@@ -13,7 +13,7 @@
 
 //figure.h and figure.cpp needs some refactoring
 //because they dont keep up with my new code standards
-//uniqe_ptr, camelCase, explicits, cleaning code
+//cleaning code
 
 
 class FPoint
@@ -48,22 +48,22 @@ std::pair<FPoint, FPoint> operator*(const std::pair<FPoint, FPoint> &pr, FPoint 
 class figure
 {
 public:
-    explicit figure(const std::vector<FPoint> vec)
-            : fdef(std::move(vec)) {};
+    explicit figure(const std::vector<FPoint> &vec)
+            : fdef(vec) {};
 
     virtual ~figure() = default;
 
-    static std::string class_id() { return "Unknown"; }
+    static std::string classId() { return "Unknown"; }
 
-    virtual std::string get_id() const = 0;
+    virtual std::string getId() const = 0;
 
-    virtual Graph_lib::Shape *get_shape(
+    virtual Graph_lib::Shape *getShape(
             const FPoint &scale = {1.0f, 1.0f},
             const FPoint &trans = {0.0f, 0.0f}) const = 0; //it was used in previous project
     virtual std::pair<FPoint, FPoint> bbox() const; //border box
     friend std::ostream &operator<<(std::ostream &os, const figure &fig);
 
-    virtual std::vector<FPoint> get_points() const = 0; //change from figure to polyline for animation purpose
+    virtual std::vector<FPoint> getPoints() const = 0; //change from figure to polyline for animation purpose
 
 protected:
     std::vector<FPoint> fdef;
@@ -79,17 +79,17 @@ public:
             throw std::runtime_error("Rect points != 2");
     }
 
-    static std::string class_id() { return "Rect"; }
+    static std::string classId() { return "Rect"; }
 
-    std::string get_id() const override { return Rect::class_id(); }
+    std::string getId() const override { return Rect::classId(); }
 
     static figure *create(const std::vector<FPoint> &points);
 
-    Graph_lib::Shape *get_shape(
+    Graph_lib::Shape *getShape(
             const FPoint &scale = {1.0f, 1.0f},
             const FPoint &trans = {0.0f, 0.0f}) const override;
 
-    std::vector<FPoint> get_points() const override;
+    std::vector<FPoint> getPoints() const override;
 };
 
 float radius(const FPoint &mid, const FPoint &pt);
@@ -104,19 +104,19 @@ public:
             throw std::runtime_error("Circ points != 2");
     }
 
-    static std::string class_id() { return "Circ"; }
+    static std::string classId() { return "Circ"; }
 
-    std::string get_id() const override { return Circ::class_id(); }
+    std::string getId() const override { return Circ::classId(); }
 
     static figure *create(const std::vector<FPoint> &points);
 
-    Graph_lib::Shape *get_shape(
+    Graph_lib::Shape *getShape(
             const FPoint &scale = {1.0f, 1.0f},
             const FPoint &trans = {0.0f, 0.0f}) const override;
 
     std::pair<FPoint, FPoint> bbox() const override;
 
-    std::vector<FPoint> get_points() const override;
+    std::vector<FPoint> getPoints() const override;
 };
 
 class Line : public figure
@@ -125,33 +125,33 @@ public:
     explicit Line(const std::vector<FPoint> &vec)
             : figure(vec) {};
 
-    static std::string class_id() { return "Line"; }
+    static std::string classId() { return "Line"; }
 
-    std::string get_id() const override { return Line::class_id(); }
+    std::string getId() const override { return Line::classId(); }
 
     static figure *create(const std::vector<FPoint> &points);
 
-    Graph_lib::Shape *get_shape(
+    Graph_lib::Shape *getShape(
             const FPoint &scale = {1.0f, 1.0f},
             const FPoint &trans = {0.0f, 0.0f}) const override;
 
-    std::vector<FPoint> get_points() const override;
+    std::vector<FPoint> getPoints() const override;
 };
 
 std::ostream &operator<<(std::ostream &os, const std::pair<FPoint, FPoint> &p);
 
-std::string get_id(std::istream &is);
+std::string getId(std::istream &is);
 
-std::vector<FPoint> get_points(std::istream &is);
+std::vector<FPoint> getPoints(std::istream &is);
 
-figure *get_figure(std::istream &is);
+figure *getFigure(std::istream &is);
 
-std::pair<FPoint, FPoint> map_bbox(
+std::pair<FPoint, FPoint> mapBbox(
         const std::vector<figure *> &figures); //it was used in previous project
-std::pair<FPoint, FPoint> get_transformation(
-        const std::pair<FPoint, FPoint> &obj_bbox,
-        const std::pair<FPoint, FPoint> &disp_bbox); //it was used in previous project
-std::string window_title();
+std::pair<FPoint, FPoint> getTransformation(
+        const std::pair<FPoint, FPoint> &objBbox,
+        const std::pair<FPoint, FPoint> &dispBbox); //it was used in previous project
+std::string windowTitle();
 
 class figFactory
 {

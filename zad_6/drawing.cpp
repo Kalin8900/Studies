@@ -34,7 +34,7 @@ void myWindow::load(const string &file) //loading data from file
     figure* fig;
     if(!ifs.good())
         throw runtime_error("Cant load points"); //application cant run without objects
-    while((fig = get_figure(ifs)) != nullptr)
+    while((fig = getFigure(ifs)) != nullptr)
     {
         figs.push_back(fig);
     }
@@ -78,7 +78,7 @@ void myWindow::refreshMap() //display
     for(const auto& elem : figs)
     {
         auto* poly = new Open_polyline;
-        vector<FPoint> points = elem->get_points();
+        vector<FPoint> points = elem->getPoints();
         for(const auto& elem : points)
         {
             poly->add(transMx.transform(elem));
